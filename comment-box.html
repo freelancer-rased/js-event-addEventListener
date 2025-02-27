@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Box</title>
+
+    <style>
+      .comment {
+        border: 2px solid steelblue;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: lightcyan;
+      }
+      .primary-style {
+        margin: 10px 10px 5px 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="primary-style">
+        My Awesome Comment Box. Write what in your mind !!!
+      </h1>
+      <p class="primary-style">All comments here</p>
+      <section id="comment-container">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quae,
+          sit corporis aliquid quasi enim, commodi atque deserunt ipsum quos
+          iste, quis aspernatur eos beatae. Nulla voluptatibus nesciunt expedita
+          natus tempora, autem molestias consequuntur ipsa cumque maxime ex modi
+          exercitationem consequatur ipsum veritatis consectetur est at harum
+          facere! Vero, quibusdam!
+        </p>
+        <p class="comment">
+          Laudantium, nihil. Rem natus ullam excepturi at maxime delectus
+          perspiciatis debitis facere ad a enim vel autem esse aliquam ducimus
+          voluptas consequatur, magni laudantium maiores quaerat nobis sunt?
+          Possimus expedita nobis voluptate maxime unde, pariatur assumenda
+          exercitationem perferendis officiis totam deserunt, ut illum illo
+          laborum, vitae quidem deleniti? Debitis, quisquam!
+        </p>
+        <p class="comment">
+          Corrupti, beatae. Maiores facilis dignissimos at quos, itaque sed nam
+          voluptates nemo, commodi saepe accusamus enim illo atque accusantium
+          praesentium iste modi doloribus, sint molestias cumque? Adipisci iste
+          fugiat tenetur officiis nostrum eveniet quisquam, ipsa pariatur eum
+          sed et reiciendis exercitationem esse, architecto, voluptate tempora
+          ea magni cupiditate perspiciatis veniam!
+        </p>
+      </section>
+      <textarea
+        class="primary-style"
+        name=""
+        id="comment-box"
+        cols="30"
+        rows="5"
+      ></textarea>
+      <br />
+      <button id="btn-comment" class="primary-style">Comment</button>
+    </main>
+
+    <script>
+      document
+        .getElementById("btn-comment")
+        .addEventListener("click", function () {
+            
+            const commentBox = document.getElementById('comment-box');
+            const commentBoxValue = commentBox.value;
+            const commentContainer = document.getElementById('comment-container');
+            const createP = document.createElement('p')
+            createP.innerText = commentBoxValue;
+            createP.classList.add('comment')
+            commentContainer.appendChild(createP)
+             
+        });
+    </script>
+  </body>
+</html>
