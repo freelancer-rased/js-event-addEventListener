@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Legend</title>
+</head>
+<body>
+    <main>
+        <p id="name-paragraph">Your Name</p>
+        <input placeholder="write your name" type="text" name="" id="name-input">
+        <button id="btn-add-name">Add Name</button>
+    </main>
+
+    <script>
+        document.getElementById('btn-add-name')
+        .addEventListener('click', function(){
+            const nameInput = document.getElementById('name-input');
+            const nameInputValue = nameInput.value;
+            const nameParagraph = document.getElementById('name-paragraph');
+            nameParagraph.innerText = nameInputValue;
+            nameInput.value = "";
+        })
+    </script>
+</body>
+</html>
