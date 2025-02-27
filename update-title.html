@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Title</title>
+</head>
+<body>
+    <main>
+        <h1 id="bangladesh">Bangladesh</h1>
+        <button id="btn-update">Update Title</button>
+        <button id="btn-reset">Reset Title</button>
+    </main>
+
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const bangladesh = document.getElementById('bangladesh');
+            bangladesh.innerText = 'India';
+        })
+        document.getElementById('btn-reset').addEventListener('click', function(){
+            const bangladesh = document.getElementById('bangladesh');
+            bangladesh.innerText = "Bangladesh";
+        })
+    </script>
+</body>
+</html>
