@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Section</title>
+    <style>
+        h1{
+            color: red;
+        }
+        section{
+            background-color: lightgrey;
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main id="main-container">
+        <h1>Welcome To My DOM</h1>
+        <section>
+            <h1>My Family Member Name</h1>
+            <ul>
+                <li>Rased</li>
+                <li>Rahima</li>
+                <li>Khairul</li>
+                <li>Omy</li>
+                <li>Abdullah</li>
+            </ul>
+        </section>
+        <section>
+            <h1>My Favorite Fruit</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+                <li>Jackfruit</li>
+                <li>Lemon</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        const mainContainer = document.getElementById('main-container');
+        const createSection = document.createElement('section');
+        const createH1 = document.createElement('h1');
+        createH1.innerText = 'My favorite Places'
+        createSection.appendChild(createH1);
+        mainContainer.appendChild(createSection)
+
+        const createUl = document.createElement('ul');
+        createSection.appendChild(createUl);
+
+        const li1 = document.createElement('li');
+        li1.innerText = 'Cox Bazar'
+        createUl.appendChild(li1)
+
+        const li2 = document.createElement('li');
+        li2.innerText = 'Bandarbon'
+        createUl.appendChild(li2)
+
+        const li3 = document.createElement('li');
+        li3.innerText = 'Rangamati'
+        createUl.appendChild(li3)
+
+        const li4 = document.createElement('li');
+        li4.innerText = 'Jaflong'
+        createUl.appendChild(li4)
+
+        const li5 = document.createElement('li');
+        li5.innerText = 'Kuakata'
+        createUl.appendChild(li5)
+
+    </script>
+</body>
+</html>
